@@ -1,8 +1,8 @@
 
 
-## **# Model-Predictive Adversarial Attack for Breaking Safety Constraints in Deep Reinforcement Learning Agents**
+## ** Model-Predictive Adversarial Attack for Breaking Safety Constraints in Deep Reinforcement Learning Agents**
 
-### **## Overview**
+### ** Overview**
 
 <div align="center">
 
@@ -18,7 +18,7 @@ MPA is a novel model-predictive adversarial attack specifically designed to brea
 
 4. Black-box Adaptation: Under black-box settings, MPA incorporates a behavior cloning module that learns a surrogate policy to approximate the victim agent’s behavior, thereby enabling gradient-based optimization without requiring direct access to the victim policy’s gradients.
 
-### **## 🚀 Installation**
+### ** 🚀 Installation**
 
 \- Python 3.7+
 
@@ -26,7 +26,7 @@ MPA is a novel model-predictive adversarial attack specifically designed to brea
 
 \- torch 1.11.0+
 
-### **## 🎯 Testing** 
+### ** 🎯 Testing** 
 
 The command structure uses the following implementation script:
 
@@ -100,7 +100,7 @@ The following metrics are logged:
 - Conditional Attack Steps
 - Expected Attack Steps
 
-### **## 🎯 Training**
+### ** 🎯 Training**
 
 #### Training the Victim Agent
 
@@ -148,17 +148,17 @@ To train the surrogate agent for adversarial policy attack experiments, use the 
 python train_surrogate_agent.py --env_id=Walker2d-v3 --attack_flag=a_low --max_perturbation=0.15
 ```
 
-### **## 🎯 Effect of MPA**
+### ** 🎯 Effect of MPA**
 
-| <img src="Figs/Hop_a_low.gif" alt="Hop_a_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Hop_a_up.gif" alt="Hop_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Hop_z_low.gif" alt="Hop_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Wal_a_low.gif" alt="Wal_a_low" style="width: 250px; display: block; margin: 0 auto;" /> |
+| <img src="figs/Hop_a_low.gif" alt="Hop_a_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Hop_a_up.gif" alt="Hop_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Hop_z_low.gif" alt="Hop_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Wal_a_low.gif" alt="Wal_a_low" style="width: 250px; display: block; margin: 0 auto;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Hopper-v3- $\phi_{\text{H1}}$                                | Hopper-v3-$\phi_{\text{H2}}$                                 | Hopper-v3-$\phi_{\text{H3}}$                                 | Walker2d-v3-$\phi_{\text{W1}}$                               |
 
-| <img src="Figs/Wal_a_up.gif" alt="Wal_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Wal_z_low.gif" alt="Wal_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Ant_z_up.gif" alt="Ant_z_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="Figs/Half_z_low.gif" alt="Half_z_low" style="width: 250px; display: block; margin: 0 auto;" /> |
+| <img src="figs/Wal_a_up.gif" alt="Wal_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Wal_z_low.gif" alt="Wal_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Ant_z_up.gif" alt="Ant_z_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Half_z_low.gif" alt="Half_z_low" style="width: 250px; display: block; margin: 0 auto;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Walker2d-v3-$\phi_{\text{W2}}$                               | Walker2d-v3-$\phi_{\text{W3}}$                               | Ant-v3-$\phi_{\text{A}}$                                     | HalfCheetah-v3-$\phi_{\text{Hf}}$                            |
 
-### **## 🎯 Acknowledgments**
+### ** 🎯 Acknowledgments**
 
 [cleanrl](https://github.com/vwxyzjn/cleanrl) for the implementation of victim agents
 

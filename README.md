@@ -1,8 +1,8 @@
 
 
-## ** Model-Predictive Adversarial Attack for Breaking Safety Constraints in Deep Reinforcement Learning Agents**
+##  Model-Predictive Adversarial Attack for Breaking Safety Constraints in Deep Reinforcement Learning Agents
 
-### ** Overview**
+###  Overview
 
 <div align="center">
 
@@ -18,7 +18,7 @@ MPA is a novel model-predictive adversarial attack specifically designed to brea
 
 4. Black-box Adaptation: Under black-box settings, MPA incorporates a behavior cloning module that learns a surrogate policy to approximate the victim agent’s behavior, thereby enabling gradient-based optimization without requiring direct access to the victim policy’s gradients.
 
-### ** 🚀 Installation**
+###  🚀 Installation
 
 \- Python 3.7+
 
@@ -26,7 +26,7 @@ MPA is a novel model-predictive adversarial attack specifically designed to brea
 
 \- torch 1.11.0+
 
-### ** 🎯 Testing** 
+###  🎯 Testing 
 
 The command structure uses the following implementation script:
 
@@ -42,7 +42,7 @@ python main_MPA_black.py --env_id={ENVIRONMENT} --attack_flag={ATTACK_TYPE} --ma
 
 #### Evaluation under white-box Setting
 
-To evaluate the attack performance of the MPA under the **white-box** setting, execute the following commands for different environments, attack types, and perturbation configurations:
+To evaluate the attack performance of the MPA under the white-box setting, execute the following commands for different environments, attack types, and perturbation configurations:
 
 ##### Hopper-v3 Environment
 
@@ -86,7 +86,7 @@ python main_MPA_white.py --env_id=Ant-v3 --attack_flag=z_up --max_perturbation=0
 
 #### Evaluation under Black-box Setting
 
-To evaluate the attack performance of MPA under the **black-box** setting, you can use a similar command structure with the `main_MPA_black.py` script. Here's how to execute it for different environments and attack configurations:
+To evaluate the attack performance of MPA under the black-box setting, you can use a similar command structure with the `main_MPA_black.py` script. Here's how to execute it for different environments and attack configurations:
 
 ```bash
 python main_MPA_black.py --env_id=Hopper-v3 --attack_flag=a_up --max_perturbation=0.075 --horizon=2  --train_or_test=test
@@ -100,7 +100,7 @@ The following metrics are logged:
 - Conditional Attack Steps
 - Expected Attack Steps
 
-### ** 🎯 Training**
+###  🎯 Training
 
 #### Training the Victim Agent
 
@@ -148,17 +148,17 @@ To train the surrogate agent for adversarial policy attack experiments, use the 
 python train_surrogate_agent.py --env_id=Walker2d-v3 --attack_flag=a_low --max_perturbation=0.15
 ```
 
-### ** 🎯 Effect of MPA**
+###  🎯 Effect of MPA
 
 | <img src="figs/Hop_a_low.gif" alt="Hop_a_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Hop_a_up.gif" alt="Hop_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Hop_z_low.gif" alt="Hop_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Wal_a_low.gif" alt="Wal_a_low" style="width: 250px; display: block; margin: 0 auto;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Hopper-v3- $\phi_{\text{H1}}$                                | Hopper-v3-$\phi_{\text{H2}}$                                 | Hopper-v3-$\phi_{\text{H3}}$                                 | Walker2d-v3-$\phi_{\text{W1}}$                               |
+| Hopper-v3- $\phi_{\text{H1}}$                                | Hopper-v3- $\phi_{\text{H2}}$                                 | Hopper-v3- $\phi_{\text{H3}}$                                 | Walker2d-v3- $\phi_{\text{W1}}$                               |
 
 | <img src="figs/Wal_a_up.gif" alt="Wal_a_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Wal_z_low.gif" alt="Wal_z_low" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Ant_z_up.gif" alt="Ant_z_up" style="width: 250px; display: block; margin: 0 auto;" /> | <img src="figs/Half_z_low.gif" alt="Half_z_low" style="width: 250px; display: block; margin: 0 auto;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Walker2d-v3-$\phi_{\text{W2}}$                               | Walker2d-v3-$\phi_{\text{W3}}$                               | Ant-v3-$\phi_{\text{A}}$                                     | HalfCheetah-v3-$\phi_{\text{Hf}}$                            |
+| Walker2d-v3- $\phi_{\text{W2}}$                               | Walker2d-v3- $\phi_{\text{W3}}$                               | Ant-v3- $\phi_{\text{A}}$                                     | HalfCheetah-v3- $\phi_{\text{Hf}}$                            |
 
-### ** 🎯 Acknowledgments**
+###  🎯 Acknowledgments
 
 [cleanrl](https://github.com/vwxyzjn/cleanrl) for the implementation of victim agents
 

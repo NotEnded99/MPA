@@ -12,11 +12,10 @@
 
 MPA is a novel model-predictive adversarial attack specifically designed to break safety constraints, as illustrated in Figure 1, comprising four core components:
 
-1. Dynamics model learning: MPA first collects diverse environment transitions through adversarial interactions to train a robust dynamics model, which is then fine-tuned for better prediction near safety boundaries.
-2. Perturbation synthesis: Leveraging the learned dynamics model, MPA introduces a model-predictive perturbation synthesis module that simulates future trajectories under candidate perturbations and iteratively refines them using gradient-based optimization, aiming to steer the system toward targeted constraint violations. 
-3. Attack timing selection: To reduce perturbation cost, MPA incorporates a violation-aware value function to guide attack timing, enabling more efficient and targeted interventions.
-
-4. Black-box Adaptation: Under black-box settings, MPA incorporates a behavior cloning module that learns a surrogate policy to approximate the victim agent’s behavior, thereby enabling gradient-based optimization without requiring direct access to the victim policy’s gradients.
+1. Dynamics model learning: To support predictive optimization, MPA first collects a diverse set of environment transitions through adversarial rollouts. These transitions are used to train a dynamics model, which is subsequently fine-tuned to improve predictive accuracy in regions near safety constraints.
+2. Perturbation synthesis: Leveraging the learned dynamics model, MPA introduces a model-predictive perturbation synthesis module that simulates future trajectories under candidate perturbations and iteratively refines them using gradient-based optimization, aiming to steer the system toward targeted constraint violations.  
+3. Attack timing selection: To reduce perturbation cost, MPA incorporates a violation-aware value function to guide attack timing, enabling more efficient interventions.
+4. Black-box adaptation: In scenarios where the victim policy's gradient is inaccessible, MPA incorporates a behavior cloning module to learn a surrogate policy that approximates the victim agent’s behavior, thereby enabling gradient-based optimization. 
 
 ###  🚀 Installation
 

@@ -1,6 +1,6 @@
 
 
-##  Model-Predictive Adversarial Attack for Breaking Safety Constraints in Deep Reinforcement Learning Agents
+## Model-Predictive Adversarial Attacks for Breaking Safety Constraints in DRL-enabled Legged Robots
 
 ###  Overview
 

@@ -1,4 +1,3 @@
-
 import logging
 import json
 import random
@@ -68,4 +67,21 @@ def save_attack_info(log_filename, target_attack_success, target_attack_success_
     logging.info("Expected Attack Steps Mean: %.2f", Expected_attack_steps_mean)
     logging.info("All Attack Success Steps: %s", target_attack_success_step)
     logging.info("--------------------------------------------------")
+
+def save_normalization_stats(env_id, state_mean, state_std, action_mean, action_std, delta_mean, delta_std, reward_mean, reward_std):
+    normalization_data = {
+        "state_mean": state_mean.tolist(),
+        "state_std": state_std.tolist(),
+        "action_mean": action_mean.tolist(),
+        "action_std": action_std.tolist(),
+        "delta_mean": delta_mean.tolist(),
+        "delta_std": delta_std.tolist(),
+        "reward_mean": reward_mean.tolist(),
+        "reward_std": reward_std.tolist(),
+    }
+
+    file_path = f"./normalization_stats_{env_id}.json"  # e.g.,   
+    with open(file_path, "w") as f:
+        json.dump(normalization_data, f)
+    print(f"Normalization stats saved to {file_path}")
 
